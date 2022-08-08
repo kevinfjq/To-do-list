@@ -1,6 +1,5 @@
-let totalTasks = 1;
+let totalTasks = 0;
 function addTask(){
-
     let taskContent = document.getElementById("input").value;
     let taskArea = document.getElementById("task-area");
 
@@ -16,6 +15,7 @@ function addTask(){
 
     let taskItem = document.createElement("div");
     taskItem.className = "task-item";
+    taskItem.setAttribute("id", "task-container"+totalTasks);
 
     taskItem.append(taskHolder);
     taskItem.append(taskLabel);
@@ -26,17 +26,22 @@ function addTask(){
     totalTasks++;
 
     document.getElementById("input").value = "";
+    
 }
 
 document.getElementById("add-button").addEventListener("click", stopFormDef, false);
+document.getElementById("delete-all").addEventListener("click", stopFormDef, false);
 
 function stopFormDef(evt){
     evt.preventDefault();
 }
 
 function deleteAll(){
-    for(let i = 0; i<totalTasks;i++){
-        let temp = getElementById("task"+(i+1));
-        temp.remove();
-    }
+    let conf = confirm("Are you sure you want to delete all tasks?");
+        for(let i = 0; i<totalTasks; i++){
+            let temp = document.getElementById("task-container"+i);
+            temp.remove();
+        }
+        totalTasks = 0;
 }
+
