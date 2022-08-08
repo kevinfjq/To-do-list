@@ -8,11 +8,17 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <h1>To-do List</h1>
-    <form>
-        <input type="text" name="task" id="input" placeholder="Type your task here">
-        <button type="submit" id="add-button"!>Add</button>
-    </form>
+    <main class="container">
+        <h1>To-do List</h1>
+        <form id="form">
+            <div class="main-area">
+                <input type="text" name="task" id="input" placeholder="Type your task here">
+                <button type="submit" id="add-button" onclick="addTask()">Add</button>
+            </div>
+            <div id="task-area">
+            </div>
+        </form>
+    </main>
     <script src="assets/script.js"></script>
 </body>
 </html>
