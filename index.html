@@ -10,6 +10,10 @@
 <body>
     <main class="container">
         <h1>To-do List</h1>
+        <div class="options">
+            <button id="delete-all" onclick="deleteAll()">Remove all</button>
+            <button id="delete-done" onclick="deleteDone()">Remove done</button>
+        </div>
         <form id="form">
             <div class="main-area">
                 <input type="text" name="task" id="input" placeholder="Type your task here">
@@ -17,9 +21,7 @@
             </div>
             <div id="task-area">
             </div>
-            <div class="options">
-                <button id="delete-all" onclick="deleteAll()">Remove all</button>
-            </div>
+
         </form>
     </main>
     <script src="assets/script.js"></script>

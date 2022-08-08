@@ -72,3 +72,12 @@ input[type="checkbox"]{
     text-decoration: line-through;
     color: grey;
 }
+
+#delete-all{
+    position: sticky;
+    bottom: 0;
+}
+
+.options{
+    margin-bottom: 10px;
+}
