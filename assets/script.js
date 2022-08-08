@@ -1,5 +1,6 @@
 let totalTasks = 1;
 function addTask(){
+
     let taskContent = document.getElementById("input").value;
     let taskArea = document.getElementById("task-area");
 
@@ -23,10 +24,19 @@ function addTask(){
     
 
     totalTasks++;
+
+    document.getElementById("input").value = "";
 }
 
 document.getElementById("add-button").addEventListener("click", stopFormDef, false);
 
 function stopFormDef(evt){
     evt.preventDefault();
+}
+
+function deleteAll(){
+    for(let i = 0; i<totalTasks;i++){
+        let temp = getElementById("task"+(i+1));
+        temp.remove();
+    }
 }
