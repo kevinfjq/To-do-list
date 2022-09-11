@@ -19,8 +19,18 @@ function addTask(){
         taskItem.className = "task-item";
         taskItem.setAttribute("id", "task-container"+totalTasks);
 
+        let removeButton = document.createElement("button");
+        removeButton.className = "remove-button";;
+        removeButton.setAttribute("id", "remove"+totalTasks);
+        removeButton.setAttribute("onClick", "deleteOne()");
+        for(let i = 0; i<totalTasks;i++){
+            document.getElementById("remove"+i).addEventListener("click", stopFormDef);
+        }
+        removeButton.innerHTML = "-";
+
         taskItem.append(taskHolder);
         taskItem.append(taskLabel);
+        taskItem.append(removeButton);
 
         taskArea.appendChild(taskItem);
         

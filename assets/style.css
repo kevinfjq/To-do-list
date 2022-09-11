@@ -81,3 +81,34 @@ input[type="checkbox"]{
 .options{
     margin-bottom: 10px;
 }
+
+.remove-button{
+    font-size: 0px;;
+    align-self: center;
+    margin-left: 4px;;
+    width: 8px;
+    border: none;
+    padding: 0.8px 5px;
+    background-color: transparent;
+}
+
+label:hover + .remove-button{
+    width: auto;
+    background-color: rgba(249, 118, 118, 0.909);
+    border: #000 solid 0.3px;
+    font-size: 10px;
+}
+
+.task-item:hover + .remove-button{
+    width: auto;
+    background-color: rgba(249, 118, 118, 0.909);
+    border: #000 solid 0.3px;
+    font-size: 10px;
+}
+
+.remove-button:hover{
+    width: auto;
+    background-color: rgba(249, 118, 118, 0.909);
+    border: #000 solid 0.3px;
+    font-size: 10px;
+}
