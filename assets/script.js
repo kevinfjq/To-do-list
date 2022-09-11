@@ -23,9 +23,6 @@ function addTask(){
         removeButton.className = "remove-button";;
         removeButton.setAttribute("id", "remove"+totalTasks);
         removeButton.setAttribute("onClick", "deleteOne()");
-        for(let i = 0; i<totalTasks;i++){
-            document.getElementById("remove"+i).addEventListener("click", stopFormDef);
-        }
         removeButton.innerHTML = "-";
 
         taskItem.append(taskHolder);
@@ -36,6 +33,9 @@ function addTask(){
         
 
         totalTasks++;
+        for(let i = 0; i<totalTasks;i++){
+            document.getElementById("remove"+i).addEventListener("click", stopFormDef);
+        }
     }
     else{
         alert("Invalid! You can't create empty tasks.");
