@@ -22,7 +22,7 @@ function addTask(){
         let removeButton = document.createElement("button");
         removeButton.className = "remove-button";;
         removeButton.setAttribute("id", "remove"+totalTasks);
-        removeButton.setAttribute("onClick", "deleteOne()");
+        removeButton.setAttribute("onClick", "removeOne(id)");
         removeButton.innerHTML = "-";
 
         taskItem.append(taskHolder);
@@ -76,5 +76,16 @@ function deleteDone(){
                 }
             }
         }
+    }
+}
+
+function removeOne(id){
+    pos = id.split("e").pop();
+    console.log(pos);
+    let conf = confirm("Are you sure you want to delete this task?");
+    
+    if(conf){
+        let temp = document.getElementById("task-container"+pos);
+        temp.remove();
     }
 }
